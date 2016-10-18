@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{45EC3818-5EAD-4B4D-9B58-67F24EB06C4D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Neuroph</RootNamespace>
+    <AssemblyName>Neuroph</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IKVM.OpenJDK.Core">
+      <HintPath>G:\Downloading\AISmartReaderNN.NET\ikvmbin-7.2.4630.5\ikvm-7.2.4630.5\bin\IKVM.OpenJDK.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Jdbc">
+      <HintPath>G:\Downloading\AISmartReaderNN.NET\ikvmbin-7.2.4630.5\ikvm-7.2.4630.5\bin\IKVM.OpenJDK.Jdbc.dll</HintPath>
+    </Reference>
+    <Reference Include="neuroph-libs">
+      <HintPath>G:\Downloading\AISmartReaderNN.NET\ikvmbin-7.2.4630.5\ikvm-7.2.4630.5\bin\libs\neuroph-libs.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="neuroph\contrib\eval\classification\ClassificationMetrics.cs" />
+    <Compile Include="neuroph\contrib\eval\classification\ClassificationResult.cs" />
+    <Compile Include="neuroph\contrib\eval\classification\Classifier.cs" />
+    <Compile Include="neuroph\contrib\eval\classification\ConfusionMatrix.cs" />
+    <Compile Include="neuroph\contrib\eval\classification\McNemarTest.cs" />
+    <Compile Include="neuroph\contrib\eval\classification\Utils.cs" />
+    <Compile Include="neuroph\contrib\eval\ClassifierEvaluator.cs" />
+    <Compile Include="neuroph\contrib\eval\ErrorEvaluator.cs" />
+    <Compile Include="neuroph\contrib\eval\Evaluation.cs" />
+    <Compile Include="neuroph\contrib\eval\EvaluationResult.cs" />
+    <Compile Include="neuroph\contrib\eval\Evaluator.cs" />
+    <Compile Include="neuroph\contrib\eval\RunEvaluation.cs" />
+    <Compile Include="neuroph\contrib\graphml\Data.cs" />
+    <Compile Include="neuroph\contrib\graphml\Edge.cs" />
+    <Compile Include="neuroph\contrib\graphml\Example.cs" />
+    <Compile Include="neuroph\contrib\graphml\ExampleNetworXOR.cs" />
+    <Compile Include="neuroph\contrib\graphml\Graph.cs" />
+    <Compile Include="neuroph\contrib\graphml\Graphml.cs" />
+    <Compile Include="neuroph\contrib\graphml\GraphmlExport.cs" />
+    <Compile Include="neuroph\contrib\graphml\Key.cs" />
+    <Compile Include="neuroph\contrib\graphml\Node.cs" />
+    <Compile Include="neuroph\contrib\graphml\XMLAttribute.cs" />
+    <Compile Include="neuroph\contrib\graphml\XMLElement.cs" />
+    <Compile Include="neuroph\contrib\graphml\XMLHeader.cs" />
+    <Compile Include="neuroph\contrib\learning\CrossEntropyError.cs" />
+    <Compile Include="neuroph\contrib\learning\SoftMax.cs" />
+    <Compile Include="neuroph\contrib\model\errorestimation\Bootstrapping.cs" />
+    <Compile Include="neuroph\contrib\model\errorestimation\CrossValidation.cs" />
+    <Compile Include="neuroph\contrib\model\errorestimation\CrossValidationResult.cs" />
+    <Compile Include="neuroph\contrib\model\errorestimation\RunCrossValidation.cs" />
+    <Compile Include="neuroph\contrib\model\modelselection\MultilayerPerceptronOptimazer.cs" />
+    <Compile Include="neuroph\contrib\model\modelselection\NeurophModelOptimizer.cs" />
+    <Compile Include="neuroph\contrib\model\sampling\AbstractSampling.cs" />
+    <Compile Include="neuroph\contrib\model\sampling\RandomSamplingWithoutRepetition.cs" />
+    <Compile Include="neuroph\contrib\model\sampling\RandomSamplingWithRepetition.cs" />
+    <Compile Include="neuroph\contrib\package-info.cs" />
+    <Compile Include="neuroph\contrib\RecommenderNetwork.cs" />
+    <Compile Include="neuroph\core\Connection.cs" />
+    <Compile Include="neuroph\core\data\BufferedDataSet.cs" />
+    <Compile Include="neuroph\core\data\DataSet.cs" />
+    <Compile Include="neuroph\core\data\DataSetRow.cs" />
+    <Compile Include="neuroph\core\data\package-info.cs" />
+    <Compile Include="neuroph\core\events\LearningEvent.cs" />
+    <Compile Include="neuroph\core\events\LearningEventListener.cs" />
+    <Compile Include="neuroph\core\events\NeuralNetworkEvent.cs" />
+    <Compile Include="neuroph\core\events\NeuralNetworkEventListener.cs" />
+    <Compile Include="neuroph\core\events\package-info.cs" />
+    <Compile Include="neuroph\core\exceptions\NeurophException.cs" />
+    <Compile Include="neuroph\core\exceptions\package-info.cs" />
+    <Compile Include="neuroph\core\exceptions\VectorSizeMismatchException.cs" />
+    <Compile Include="neuroph\core\input\And.cs" />
+    <Compile Include="neuroph\core\input\Difference.cs" />
+    <Compile Include="neuroph\core\input\EuclideanRBF.cs" />
+    <Compile Include="neuroph\core\input\InputFunction.cs" />
+    <Compile Include="neuroph\core\input\Max.cs" />
+    <Compile Include="neuroph\core\input\Min.cs" />
+    <Compile Include="neuroph\core\input\Or.cs" />
+    <Compile Include="neuroph\core\input\package-info.cs" />
+    <Compile Include="neuroph\core\input\Product.cs" />
+    <Compile Include="neuroph\core\input\Sum.cs" />
+    <Compile Include="neuroph\core\input\SumSqr.cs" />
+    <Compile Include="neuroph\core\input\WeightedSum.cs" />
+    <Compile Include="neuroph\core\Layer.cs" />
+    <Compile Include="neuroph\core\learning\error\ErrorFunction.cs" />
+    <Compile Include="neuroph\core\learning\error\MeanSquaredError.cs" />
+    <Compile Include="neuroph\core\learning\error\package-info.cs" />
+    <Compile Include="neuroph\core\learning\IterativeLearning.cs" />
+    <Compile Include="neuroph\core\learning\LearningRule.cs" />
+    <Compile Include="neuroph\core\learning\package-info.cs" />
+    <Compile Include="neuroph\core\learning\stop\MaxErrorStop.cs" />
+    <Compile Include="neuroph\core\learning\stop\MaxIterationsStop.cs" />
+    <Compile Include="neuroph\core\learning\stop\package-info.cs" />
+    <Compile Include="neuroph\core\learning\stop\SmallErrorChangeStop.cs" />
+    <Compile Include="neuroph\core\learning\stop\StopCondition.cs" />
+    <Compile Include="neuroph\core\learning\SupervisedLearning.cs" />
+    <Compile Include="neuroph\core\learning\UnsupervisedLearning.cs" />
+    <Compile Include="neuroph\core\NeuralNetwork.cs" />
+    <Compile Include="neuroph\core\Neuron.cs" />
+    <Compile Include="neuroph\core\package-info.cs" />
+    <Compile Include="neuroph\core\transfer\Gaussian.cs" />
+    <Compile Include="neuroph\core\transfer\Linear.cs" />
+    <Compile Include="neuroph\core\transfer\Log.cs" />
+    <Compile Include="neuroph\core\transfer\package-info.cs" />
+    <Compile Include="neuroph\core\transfer\Ramp.cs" />
+    <Compile Include="neuroph\core\transfer\RectifiedLinear.cs" />
+    <Compile Include="neuroph\core\transfer\Sgn.cs" />
+    <Compile Include="neuroph\core\transfer\Sigmoid.cs" />
+    <Compile Include="neuroph\core\transfer\Sin.cs" />
+    <Compile Include="neuroph\core\transfer\Step.cs" />
+    <Compile Include="neuroph\core\transfer\Tanh.cs" />
+    <Compile Include="neuroph\core\transfer\TransferFunction.cs" />
+    <Compile Include="neuroph\core\transfer\Trapezoid.cs" />
+    <Compile Include="neuroph\core\Weight.cs" />
+    <Compile Include="neuroph\nnet\Adaline.cs" />
+    <Compile Include="neuroph\nnet\AutoencoderNetwork.cs" />
+    <Compile Include="neuroph\nnet\BAM.cs" />
+    <Compile Include="neuroph\nnet\CompetitiveNetwork.cs" />
+    <Compile Include="neuroph\nnet\comp\ConvolutionalUtils.cs" />
+    <Compile Include="neuroph\nnet\comp\DelayedConnection.cs" />
+    <Compile Include="neuroph\nnet\comp\Dimension2D.cs" />
+    <Compile Include="neuroph\nnet\comp\Kernel.cs" />
+    <Compile Include="neuroph\nnet\comp\layer\CompetitiveLayer.cs" />
+    <Compile Include="neuroph\nnet\comp\layer\ConvolutionalLayer.cs" />
+    <Compile Include="neuroph\nnet\comp\layer\FeatureMapLayer.cs" />
+    <Compile Include="neuroph\nnet\comp\layer\FeatureMapsLayer.cs" />
+    <Compile Include="neuroph\nnet\comp\layer\InputLayer.cs" />
+    <Compile Include="neuroph\nnet\comp\layer\InputMapsLayer.cs" />
+    <Compile Include="neuroph\nnet\comp\layer\package-info.cs" />
+    <Compile Include="neuroph\nnet\comp\layer\PoolingLayer.cs" />
+    <Compile Include="neuroph\nnet\comp\neuron\BiasNeuron.cs" />
+    <Compile Include="neuroph\nnet\comp\neuron\CompetitiveNeuron.cs" />
+    <Compile Include="neuroph\nnet\comp\neuron\DelayedNeuron.cs" />
+    <Compile Include="neuroph\nnet\comp\neuron\InputNeuron.cs" />
+    <Compile Include="neuroph\nnet\comp\neuron\InputOutputNeuron.cs" />
+    <Compile Include="neuroph\nnet\comp\neuron\package-info.cs" />
+    <Compile Include="neuroph\nnet\comp\neuron\ThresholdNeuron.cs" />
+    <Compile Include="neuroph\nnet\comp\package-info.cs" />
+    <Compile Include="neuroph\nnet\ConvolutionalNetwork.cs" />
+    <Compile Include="neuroph\nnet\ElmanNetwork.cs" />
+    <Compile Include="neuroph\nnet\Hopfield.cs" />
+    <Compile Include="neuroph\nnet\Instar.cs" />
+    <Compile Include="neuroph\nnet\JordanNetwork.cs" />
+    <Compile Include="neuroph\nnet\Kohonen.cs" />
+    <Compile Include="neuroph\nnet\learning\AntiHebbianLearning.cs" />
+    <Compile Include="neuroph\nnet\learning\BackPropagation.cs" />
+    <Compile Include="neuroph\nnet\learning\BinaryDeltaRule.cs" />
+    <Compile Include="neuroph\nnet\learning\BinaryHebbianLearning.cs" />
+    <Compile Include="neuroph\nnet\learning\CompetitiveLearning.cs" />
+    <Compile Include="neuroph\nnet\learning\ConvolutionalBackpropagation.cs" />
+    <Compile Include="neuroph\nnet\learning\DynamicBackPropagation.cs" />
+    <Compile Include="neuroph\nnet\learning\GeneralizedHebbianLearning.cs" />
+    <Compile Include="neuroph\nnet\learning\HopfieldLearning.cs" />
+    <Compile Include="neuroph\nnet\learning\InstarLearning.cs" />
+    <Compile Include="neuroph\nnet\learning\kmeans\Cluster.cs" />
+    <Compile Include="neuroph\nnet\learning\kmeans\KMeansClustering.cs" />
+    <Compile Include="neuroph\nnet\learning\kmeans\KVector.cs" />
+    <Compile Include="neuroph\nnet\learning\knn\KNearestNeighbour.cs" />
+    <Compile Include="neuroph\nnet\learning\KohonenLearning.cs" />
+    <Compile Include="neuroph\nnet\learning\LMS.cs" />
+    <Compile Include="neuroph\nnet\learning\MomentumBackpropagation.cs" />
+    <Compile Include="neuroph\nnet\learning\OjaLearning.cs" />
+    <Compile Include="neuroph\nnet\learning\OutstarLearning.cs" />
+    <Compile Include="neuroph\nnet\learning\package-info.cs" />
+    <Compile Include="neuroph\nnet\learning\PerceptronLearning.cs" />
+    <Compile Include="neuroph\nnet\learning\RBFLearning.cs" />
+    <Compile Include="neuroph\nnet\learning\ResilientPropagation.cs" />
+    <Compile Include="neuroph\nnet\learning\SigmoidDeltaRule.cs" />
+    <Compile Include="neuroph\nnet\learning\SimulatedAnnealingLearning.cs" />
+    <Compile Include="neuroph\nnet\learning\SupervisedHebbianLearning.cs" />
+    <Compile Include="neuroph\nnet\learning\UnsupervisedHebbianLearning.cs" />
+    <Compile Include="neuroph\nnet\MaxNet.cs" />
+    <Compile Include="neuroph\nnet\MultiLayerPerceptron.cs" />
+    <Compile Include="neuroph\nnet\NeuroFuzzyPerceptron.cs" />
+    <Compile Include="neuroph\nnet\Outstar.cs" />
+    <Compile Include="neuroph\nnet\package-info.cs" />
+    <Compile Include="neuroph\nnet\Perceptron.cs" />
+    <Compile Include="neuroph\nnet\RBFNetwork.cs" />
+    <Compile Include="neuroph\nnet\SupervisedHebbianNetwork.cs" />
+    <Compile Include="neuroph\nnet\UnsupervisedHebbianNetwork.cs" />
+    <Compile Include="neuroph\util\benchmark\Benchmark.cs" />
+    <Compile Include="neuroph\util\benchmark\BenchmarkSample.cs" />
+    <Compile Include="neuroph\util\benchmark\BenchmarkTask.cs" />
+    <Compile Include="neuroph\util\benchmark\BenchmarkTaskResults.cs" />
+    <Compile Include="neuroph\util\benchmark\MyBenchmarkTask.cs" />
+    <Compile Include="neuroph\util\benchmark\package-info.cs" />
+    <Compile Include="neuroph\util\benchmark\Stopwatch.cs" />
+    <Compile Include="neuroph\util\ConnectionFactory.cs" />
+    <Compile Include="neuroph\util\data\norm\DecimalScaleNormalizer.cs" />
+    <Compile Include="neuroph\util\data\norm\MaxMinNormalizer.cs" />
+    <Compile Include="neuroph\util\data\norm\MaxNormalizer.cs" />
+    <Compile Include="neuroph\util\data\norm\Normalizer.cs" />
+    <Compile Include="neuroph\util\data\norm\package-info.cs" />
+    <Compile Include="neuroph\util\data\norm\RangeNormalizer.cs" />
+    <Compile Include="neuroph\util\data\sample\package-info.cs" />
+    <Compile Include="neuroph\util\data\sample\Sampling.cs" />
+    <Compile Include="neuroph\util\data\sample\SubSampling.cs" />
+    <Compile Include="neuroph\util\io\FileInputAdapter.cs" />
+    <Compile Include="neuroph\util\io\FileOutputAdapter.cs" />
+    <Compile Include="neuroph\util\io\InputAdapter.cs" />
+    <Compile Include="neuroph\util\io\InputStreamAdapter.cs" />
+    <Compile Include="neuroph\util\io\IOHelper.cs" />
+    <Compile Include="neuroph\util\io\JDBCInputAdapter.cs" />
+    <Compile Include="neuroph\util\io\JDBCOutputAdapter.cs" />
+    <Compile Include="neuroph\util\io\NeurophInputException.cs" />
+    <Compile Include="neuroph\util\io\NeurophOutputException.cs" />
+    <Compile Include="neuroph\util\io\OutputAdapter.cs" />
+    <Compile Include="neuroph\util\io\OutputStreamAdapter.cs" />
+    <Compile Include="neuroph\util\io\package-info.cs" />
+    <Compile Include="neuroph\util\io\URLInputAdapter.cs" />
+    <Compile Include="neuroph\util\io\URLOutputAdapter.cs" />
+    <Compile Include="neuroph\util\LayerFactory.cs" />
+    <Compile Include="neuroph\util\NeuralNetworkCODEC.cs" />
+    <Compile Include="neuroph\util\NeuralNetworkFactory.cs" />
+    <Compile Include="neuroph\util\NeuralNetworkType.cs" />
+    <Compile Include="neuroph\util\NeuronFactory.cs" />
+    <Compile Include="neuroph\util\NeuronProperties.cs" />
+    <Compile Include="neuroph\util\Neuroph.cs" />
+    <Compile Include="neuroph\util\package-info.cs" />
+    <Compile Include="neuroph\util\plugins\package-info.cs" />
+    <Compile Include="neuroph\util\plugins\PluginBase.cs" />
+    <Compile Include="neuroph\util\Properties.cs" />
+    <Compile Include="neuroph\util\random\DistortRandomizer.cs" />
+    <Compile Include="neuroph\util\random\GaussianRandomizer.cs" />
+    <Compile Include="neuroph\util\random\NguyenWidrowRandomizer.cs" />
+    <Compile Include="neuroph\util\random\package-info.cs" />
+    <Compile Include="neuroph\util\random\RangeRandomizer.cs" />
+    <Compile Include="neuroph\util\random\WeightsRandomizer.cs" />
+    <Compile Include="neuroph\util\TrainingSetImport.cs" />
+    <Compile Include="neuroph\util\TransferFunctionType.cs" />
+    <Compile Include="neuroph\util\VectorParser.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="java\org\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
