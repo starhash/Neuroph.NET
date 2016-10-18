@@ -3,8 +3,8 @@
 namespace org.neuroph.contrib.eval
 {
 
-	using ClassificationMetrics = org.neuroph.contrib.eval.classification.ClassificationMetrics;
-	using ConfusionMatrix = org.neuroph.contrib.eval.classification.ConfusionMatrix;
+	using ClassificationMetrics = org.org.neuroph.contrib.eval.classification.ClassificationMetrics;
+	using ConfusionMatrix = org.org.neuroph.contrib.eval.classification.ConfusionMatrix;
 	using DataSet = org.neuroph.core.data.DataSet;
 
 	/// <summary>

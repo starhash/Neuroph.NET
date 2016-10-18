@@ -1,8 +1,8 @@
 ﻿namespace org.neuroph.contrib.eval
 {
     using System;
-    using ConfusionMatrix = org.neuroph.contrib.eval.classification.ConfusionMatrix;
-    using Utils = org.neuroph.contrib.eval.classification.Utils;
+    using ConfusionMatrix = org.org.neuroph.contrib.eval.classification.ConfusionMatrix;
+    using Utils = org.org.neuroph.contrib.eval.classification.Utils;
 
     public abstract class ClassifierEvaluator : Evaluator<ConfusionMatrix>
 	{

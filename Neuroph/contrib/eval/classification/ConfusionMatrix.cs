@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace org.neuroph.contrib.eval.classification
+namespace org.org.neuroph.contrib.eval.classification
 {
 
 	/// <summary>

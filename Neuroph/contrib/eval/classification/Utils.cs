@@ -1,4 +1,4 @@
-﻿namespace org.neuroph.contrib.eval.classification
+﻿namespace org.org.neuroph.contrib.eval.classification
 {
 
 	public class Utils
