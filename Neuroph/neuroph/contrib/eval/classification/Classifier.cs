@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-namespace org.org.neuroph.contrib.eval.classification
+namespace org.neuroph.contrib.eval.classification
 {
 
 	using org.neuroph.core;

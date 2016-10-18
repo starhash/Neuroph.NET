@@ -5,7 +5,7 @@ namespace org.neuroph.contrib.model.errorestimation
 {
 
 	using Evaluation = org.neuroph.contrib.eval.Evaluation;
-	using ClassificationMetrics = org.org.neuroph.contrib.eval.classification.ClassificationMetrics;
+	using ClassificationMetrics = org.neuroph.contrib.eval.classification.ClassificationMetrics;
 	using ClassifierEvaluator = org.neuroph.contrib.eval.ClassifierEvaluator;
 	using org.neuroph.core;
 	using DataSet = org.neuroph.core.data.DataSet;
@@ -17,7 +17,7 @@ namespace org.neuroph.contrib.model.errorestimation
 	using ErrorEvaluator = org.neuroph.contrib.eval.ErrorEvaluator;
 	using EvaluationResult = org.neuroph.contrib.eval.EvaluationResult;
 	using org.neuroph.contrib.eval;
-	using ConfusionMatrix = org.org.neuroph.contrib.eval.classification.ConfusionMatrix;
+	using ConfusionMatrix = org.neuroph.contrib.eval.classification.ConfusionMatrix;
 	using SubSampling = org.neuroph.util.data.sample.SubSampling;
 
 	/// <summary>

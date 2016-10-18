@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace org.org.neuroph.contrib.eval.classification
+namespace org.neuroph.contrib.eval.classification
 {
 
 

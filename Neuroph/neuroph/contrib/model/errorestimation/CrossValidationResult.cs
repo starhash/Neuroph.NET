@@ -4,7 +4,7 @@ namespace org.neuroph.contrib.model.errorestimation
 {
 
 	using EvaluationResult = org.neuroph.contrib.eval.EvaluationResult;
-	using ClassificationMetrics = org.org.neuroph.contrib.eval.classification.ClassificationMetrics;
+	using ClassificationMetrics = org.neuroph.contrib.eval.classification.ClassificationMetrics;
 
 	/// 
 	/// <summary>

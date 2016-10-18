@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace org.org.neuroph.contrib.eval.classification
+namespace org.neuroph.contrib.eval.classification
 {
 
 

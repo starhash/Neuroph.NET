@@ -5,7 +5,7 @@ namespace org.neuroph.contrib.model.modelselection
 
     using Bootstrapping = org.neuroph.contrib.model.errorestimation.Bootstrapping;
     using CrossValidation = org.neuroph.contrib.model.errorestimation.CrossValidation;
-    using ClassificationMetrics = org.org.neuroph.contrib.eval.classification.ClassificationMetrics;
+    using ClassificationMetrics = org.neuroph.contrib.eval.classification.ClassificationMetrics;
     using org.neuroph.core;
     using DataSet = org.neuroph.core.data.DataSet;
     using LearningEvent = org.neuroph.core.events.LearningEvent;
